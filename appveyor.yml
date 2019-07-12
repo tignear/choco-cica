@@ -12,8 +12,8 @@ build_script:
   - ps: ./update.ps1
 
 deploy_script:
-  - ps: ./deploy.ps1
+  - ps: Push-Package 
 
 environment:
-  CHOCO_TOKEN:
+  api_key:
     secure: HOu34YSie/R02kYwFF7PQVOM2l1jnE7E27LMc2zombOAjbXOR16n6ToL1yjB6g8f
