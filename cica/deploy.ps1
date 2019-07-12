@@ -1,0 +1,1 @@
+choco push cica --source https://chocolatey.org/ 

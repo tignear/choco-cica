@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>cica</id>
+    <version>5.0.1</version>
+    <title>Cica</title>
+    <owners>miiton</owners>
+    <authors>tignear</authors>
+    <licenseUrl>https://raw.githubusercontent.com/miiton/Cica/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/miiton/Cica</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+
+プログラミング用日本語等幅フォント Cica(シカ)
+
+    </description>
+    <releaseNotes>https://github.com/miiton/Cica/releases</releaseNotes>
+    <tags>font japanese programming-font </tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
