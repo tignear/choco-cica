@@ -4,14 +4,13 @@ branches:
   only:
     - master
 
-init:
-  - ps: cd cica
 install:
   - ps: Install-Module au
+  - ps: cd cica
 
 build_script:
-
   - ps: ./update.ps1
+  
 deploy_script:
   - ps: cd cica
   - ps: ./deploy.ps1
