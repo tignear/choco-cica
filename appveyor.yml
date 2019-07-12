@@ -1,9 +1,12 @@
 image: Visual Studio 2017
 
-
 branches:
   only:
     - master
+
+install:
+  -ps: Install-Module au
+
 build_script:
   - ps: cd cica
   - ps: ./update.ps1
