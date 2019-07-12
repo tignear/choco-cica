@@ -13,3 +13,7 @@ build_script:
 
 deploy_script:
   - ps: ./deploy.ps1
+
+environment:
+  CHOCO_TOKEN:
+    secure: HOu34YSie/R02kYwFF7PQVOM2l1jnE7E27LMc2zombOAjbXOR16n6ToL1yjB6g8f
