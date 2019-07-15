@@ -8,17 +8,12 @@ $packageArgs = @{
   unzipLocation = $dist
   url           = $url
   softwareName  = 'cica*'
-  checksum      = ''
+  checksum      = 'b61ae55fb1a4a98dd78e90fe68649bcfaabb20a5eaaffa57c246356890c6b0df'
   checksumType  = 'sha256'
 }
  
 # un zip
 Install-ChocolateyZipPackage @packageArgs
- 
-# un tar
-# 
-#$zip = Join-Path $toolsDir ("$([System.IO.Path]::GetFileNameWithoutExtension($url)).zip")
-#Get-ChocolateyUnzip -FileFullPath $zip -Destination $dist
  
 # Install fonts
 powershell -f """$(Split-Path -parent $MyInvocation.MyCommand.Definition)\Add-Font.ps1"""  $dist

@@ -2,19 +2,64 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>cica</id>
-    <version>0.0</version>
+    <version>5.0.1</version>
     <title>Cica</title>
-    <owners>miiton</owners>
-    <authors>tignear</authors>
+    <owners>tignear</owners>
+    <authors>miiton</authors>
     <licenseUrl>https://raw.githubusercontent.com/miiton/Cica/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/miiton/Cica</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <projectSourceUrl>https://github.com/miiton/Cica</projectSourceUrl>
+    <packageSourceUrl>https://github.com/tignear/choco-cica</packageSourceUrl>
+    <summary>
 
 Japanese monospaced font for programming.
 
 プログラミング用日本語等幅フォント Cica(シカ)
 
+    </summary>
+    <description>
+# Cica
+Japanese monospaced font for programming.
+プログラミング用日本語等幅フォント
+
+## Feature
+
+* This is a monospaced Japanese font for programming, adjusted after composition of the following fonts
+    - Use [Hack](https://sourcefoundry.org/hack/) + [DejaVu Sans Mono](https://dejavu-fonts.github.io/) for alphanumeric characters and symbols
+    -  [Rounded Mgen+](http://jikasei.me/font/rounded-mgenplus/) for other characters
+    - [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) (= Powerline patch, other applied. Pomicons excluded ※)
+    - [Noto Emoji](https://www.google.com/get/noto/)
+    - [Icons for Devs](https://github.com/mirmat/iconsfordevs)
+    - Various adjustments forked from Ricty generator.
+    - Shorten the middle bar of `m` as your own adjustment (it's easy to distinguish` rn` and `m` and a bit cute)
+* It corresponds to the screen division of tmux.
+* Characters are not missing even in non-HiDPI (non-Retina) Windows
+* Consider the readability of special characters such as subscripts and superscripts (assuming [JuliaLang](https://julialang.org/) )
+* License
+   - The font file is SIL Open Font License 1.1
+   - The source code of the synthesis script etc. is MIT
+- ※Pomicons glyphs included in Nerd Fonts are excluded from the generator because they are licenses that can not be used commercially.
+- ※You can check the icons at [https:\/\/miiton.github.io\/Cica\/](https://miiton.github.io/Cica/) after installing the font.
+
+## 特徴
+
+* 以下のフォントを合成後に調整した、プログラミング向けの等幅日本語フォントです
+    - 英数字、記号類に [Hack](https://sourcefoundry.org/hack/) + [DejaVu Sans Mono](https://dejavu-fonts.github.io/)
+    - それ以外の文字に [Rounded Mgen+](http://jikasei.me/font/rounded-mgenplus/)
+    - [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) (= Powerlineパッチ、その他適用済。Pomiconsは除外※)
+    - [Noto Emoji](https://www.google.com/get/noto/)
+    - [Icons for Devs](https://github.com/mirmat/iconsfordevs)
+    - RictyジェネレータからForkした各種調整
+    - 独自の調整として `m` の真ん中の棒を短く（ `rn` と `m` を区別しやすく＆ちょっと可愛らしく）
+* tmuxの画面分割に対応しています
+* 非HiDPI（非Retina）のWindowsでも文字が欠けません
+* 下付き文字や上付き文字など、特殊な文字の判読性を考慮（[JuliaLang](https://julialang.org/) を想定しています）
+* ライセンス
+    - フォントファイルは SIL Open Font License 1.1 です
+    - 合成スクリプト等のソースコードは MIT です
+- ※Nerd Fontsに含まれるPomiconsのグリフは商用利用が出来ないライセンスなのでジェネレータからは除外しています。
+- ※アイコン類はフォントをインストール後 [https:\/\/miiton.github.io\/Cica\/](https://miiton.github.io/Cica/) で確認出来ます。
     </description>
     <releaseNotes>https://github.com/miiton/Cica/releases</releaseNotes>
     <tags>font japanese programming-font </tags>
