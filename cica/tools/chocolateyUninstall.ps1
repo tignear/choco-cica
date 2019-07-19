@@ -1,9 +1,15 @@
-$ErrorActionPreference = 'Continue';
- 
-$packageName= 'cica'
+$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
- 
-$fonts =  Join-Path $toolsDir "fonts"
- 
-Get-ChildItem $fonts |
-  ForEach-Object {powershell -f """$(Split-Path -parent $MyInvocation.MyCommand.Definition)\Remove-Font.ps1"""  ([System.IO.Path]::GetFileName($_))}
+$destination = Join-Path $toolsDir "fonts"
+$fontHelpers=Join-Path $toolsDir FontHelpers.ps1;
+. $fontHelpers
+
+$fontFiles = Get-ChildItem $destination -Recurse -Filter *.ttf
+
+[string[]]$commands = $fontFiles |
+ForEach-Object { Join-Path $fontsFolderPath $_.Name } |
+Where-Object { Test-Path $_ } |
+ForEach-Object { "Remove-SingleFont '$($_.Name)' -Force" }
+$toExecute = ". $fontHelpers;" + ($commands -join ';')
+Write-Host $toExecute
+Start-ChocolateyProcessAsAdmin $toExecute
