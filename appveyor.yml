@@ -16,4 +16,4 @@ deploy_script:
 
 environment:
   api_key:
-    secure: HOu34YSie/R02kYwFF7PQVOM2l1jnE7E27LMc2zombOAjbXOR16n6ToL1yjB6g8f
+    secure: rFDATR6/Udw+y06kyO4AG81qTNRQ6pE5PJeBGJdTjijJ0Wlm+S33zmL7/EO8w/sC
