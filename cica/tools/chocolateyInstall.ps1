@@ -25,7 +25,7 @@ $fontFiles = Get-ChildItem $destination -Recurse -Filter *.ttf
 [string[]]$commands = $fontFiles |
 ForEach-Object { Join-Path $fontsFolderPath $_.Name } |
 Where-Object { Test-Path $_ } |
-ForEach-Object { "Remove-SingleFont '$($_.Name)' -Force" }
+ForEach-Object { "Remove-SingleFont '$([System.IO.Path]::GetFileName($_))' -Force" }
  
 # http://blogs.technet.com/b/deploymentguys/archive/2010/12/04/adding-and-removing-fonts-with-windows-powershell.aspx
 $fontFiles |
