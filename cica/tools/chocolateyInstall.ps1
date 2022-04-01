@@ -14,11 +14,9 @@ $packageArgs = @{
   checksum      = 'cbd1bcf1f3fd1ddbffe444369c76e42529add8538b25aeb75ab682d398b0506f'
   checksumType  = 'sha256'
 }
-Write-Host $fontsFolderPath
 
 # un zip
 Install-ChocolateyZipPackage @packageArgs
-
 
 # Install fonts
 $fontFiles = Get-ChildItem $destination -Recurse -Filter *.ttf
@@ -32,7 +30,6 @@ $fontFiles |
 ForEach-Object { $commands += "Add-SingleFont '$($_.FullName)'" }
  
 $toExecute = ". '$fontHelpers';" + ($commands -join ';')
-Write-Host $toExecute
 Start-ChocolateyProcessAsAdmin $toExecute
 
 
