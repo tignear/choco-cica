@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url='https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip'
+$url='https://github.com/miiton/Cica/releases/download/v5.0.3/Cica_v5.0.3.zip'
 $packageName= 'cica'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $destination = Join-Path $toolsDir "fonts"
@@ -11,7 +11,7 @@ $packageArgs = @{
   unzipLocation = $destination
   url           = $url
   softwareName  = 'cica*'
-  checksum      = 'b61ae55fb1a4a98dd78e90fe68649bcfaabb20a5eaaffa57c246356890c6b0df'
+  checksum      = 'cbd1bcf1f3fd1ddbffe444369c76e42529add8538b25aeb75ab682d398b0506f'
   checksumType  = 'sha256'
 }
 Write-Host $fontsFolderPath
