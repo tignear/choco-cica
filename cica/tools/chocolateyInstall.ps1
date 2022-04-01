@@ -31,6 +31,3 @@ ForEach-Object { $commands += "Add-SingleFont '$($_.FullName)'" }
  
 $toExecute = ". '$fontHelpers';" + ($commands -join ';')
 Start-ChocolateyProcessAsAdmin $toExecute
-
-
- 
