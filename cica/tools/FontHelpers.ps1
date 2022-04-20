@@ -457,8 +457,8 @@ function Add-SingleFont($filePath)
         }
         else
         {
-            Write-Host "Font `'$($filePath)`' installed successfully"
-            Write-Host ""
+            #Write-Host "Font `'$($filePath)`' installed successfully"
+            #Write-Host ""
             Set-ItemProperty -path "$($fontRegistryPath)" -name "$($fontName)$($hashFontFileTypes.item($fileExt))" -value "$($fileName)" -type STRING
             0
         }
@@ -548,8 +548,8 @@ function Remove-SingleFont($file)
             }
             else
             {
-                Write-Host "Font `'$($file)`' removed successfully"
-                Write-Host ""
+                #Write-Host "Font `'$($file)`' removed successfully"
+                #Write-Host ""
             }
             0
         }
